@@ -1,9 +1,10 @@
 import express from 'express';
+import serverless from 'serverless-http';
 
 const app = express();
 
-app.use(ctx => {
-  ctx.body = 'Hello World';
+app.get('/', (req, res) => {
+  res.json({ hello: 'world' });
 });
 
 app.listen(4000, err => {
@@ -12,3 +13,5 @@ app.listen(4000, err => {
   }
   console.log('Server is running on port 4000..');
 });
+
+export const handler = serverless(app);
