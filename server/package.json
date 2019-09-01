@@ -22,7 +22,11 @@
   "author": "The serverless webpack authors (https://github.com/elastic-coders/serverless-webpack)",
   "license": "MIT",
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
     "express": "^4.17.1",
+    "helmet": "^3.20.1",
+    "morgan": "^1.9.1",
     "serverless-http": "^2.3.0"
   }
 }
