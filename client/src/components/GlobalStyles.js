@@ -3,7 +3,7 @@ import Reset from 'styled-reset';
 
 const globalStyles = createGlobalStyle`
     ${Reset};
-    
+
     a{
         text-decoration: none;
         color: inherit;
@@ -20,6 +20,9 @@ const globalStyles = createGlobalStyle`
 
     .fw-color {
       color: #0A8A8A;
+    }
+    .fw-bgcolor {
+      background-color: #0A8A8A;
     }
 `;
 
