@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Route, Link } from 'react-router-dom';
-import Index from '../Home';
-import { SignIn, SignUp } from '../index';
+import Home from '../Home';
+import { SignIn, SignUp } from '../Index';
 
 export default class Header extends Component {
   render() {
@@ -19,7 +19,7 @@ export default class Header extends Component {
           </li>
         </ul>
         <hr />
-        <Route exact path="/" component={Index} />
+        <Route exact path="/" component={Home} />
         <Route path="/signin" component={SignIn} />
         <Route path="/signup" component={SignUp} />
       </div>
