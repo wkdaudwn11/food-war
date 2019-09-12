@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.js": "/food-war/static/js/main.2fc78fd0.chunk.js",
+    "main.js.map": "/food-war/static/js/main.2fc78fd0.chunk.js.map",
+    "runtime~main.js": "/food-war/static/js/runtime~main.513414c8.js",
+    "runtime~main.js.map": "/food-war/static/js/runtime~main.513414c8.js.map",
+    "static/js/2.a8ba4e87.chunk.js": "/food-war/static/js/2.a8ba4e87.chunk.js",
+    "static/js/2.a8ba4e87.chunk.js.map": "/food-war/static/js/2.a8ba4e87.chunk.js.map",
+    "static/js/3.261a9673.chunk.js": "/food-war/static/js/3.261a9673.chunk.js",
+    "static/js/3.261a9673.chunk.js.map": "/food-war/static/js/3.261a9673.chunk.js.map",
+    "static/js/4.7452e56e.chunk.js": "/food-war/static/js/4.7452e56e.chunk.js",
+    "static/js/4.7452e56e.chunk.js.map": "/food-war/static/js/4.7452e56e.chunk.js.map",
+    "index.html": "/food-war/index.html",
+    "precache-manifest.76076d7d4778ddb5fdf1c267030d8f18.js": "/food-war/precache-manifest.76076d7d4778ddb5fdf1c267030d8f18.js",
+    "service-worker.js": "/food-war/service-worker.js"
+  }
+}
