@@ -1,2 +1,1 @@
 # food-war
-Food War
