@@ -2,13 +2,16 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://wkdaudwn11.github.io/food-war/",
   "dependencies": {
+    "gh-pages": "^2.1.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.1.1",
     "styled-components": "^4.3.2",
-    "styled-reset": "^4.0.0"
+    "styled-reset": "^4.0.0",
+    "deploy": "npm run build&&gh-pages -d build"
   },
   "scripts": {
     "start": "react-scripts start",
