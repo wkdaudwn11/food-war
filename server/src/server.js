@@ -20,7 +20,7 @@ app.use(morgan('dev'));
 app.use('/user', userRouter);
 
 const PORT = process.env.PORT || 4000;
-const handleListening = () => console.log(`Listening on: http://localhost:${PORT}`);
+const handleListening = () => console.log(`Listening on: http://localhost:${PORT}..`);
 
 app.listen(PORT, err => {
   if (err) {
