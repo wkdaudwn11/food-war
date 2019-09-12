@@ -10,14 +10,14 @@
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.1.1",
     "styled-components": "^4.3.2",
-    "styled-reset": "^4.0.0",
-    "deploy": "npm run build&&gh-pages -d build"
+    "styled-reset": "^4.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "npm run build&&gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
