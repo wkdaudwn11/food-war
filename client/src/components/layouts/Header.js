@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Route, Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { withRouter } from 'react-router';
-
+import $ from 'jquery';
 import Lottie from 'react-lottie';
 import menuLottie from '../../lotties/menu-V2.json';
 
@@ -80,6 +80,23 @@ const HeaderWrap = styled.div`
     stroke: rgb(255, 255, 255);
   }
 
+  #mb-sidebar {
+    display: none;
+    position: absolute;
+    top: 4vh;
+    left: 100%;
+    width: 100%;
+    height: 96vh;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+  }
+
+  #mb-sidebar div + div {
+    margin-top: 2rem;
+  }
+
   /** Responsive */
   @media (max-width: 600px) {
     .pc-header {
@@ -102,6 +119,20 @@ class Header extends Component {
     this.setState({
       isStopped: !this.state.isStopped
     });
+
+    this.onSideMenu(this.state.isStopped);
+  };
+
+  onSideMenu = isStop => {
+    if (isStop) {
+      $('#mb-sidebar').css('display', 'flex');
+      $('#mb-sidebar').css('flex-direction', 'column');
+      $('#mb-sidebar').animate({ left: '0%' }, 800);
+    } else {
+      $('#mb-sidebar').animate({ left: '100%' }, 800, () => {
+        $('#mb-sidebar').css('display', 'none');
+      });
+    }
   };
 
   render() {
@@ -148,12 +179,43 @@ class Header extends Component {
 
           {/** mb-header start */}
           <div className="mb-header">
-            <div className="mb-logo">Food War</div>
+            <div className="mb-logo">
+              <Link to="/">Food War</Link>
+            </div>
             <div className="mb-menu" onClick={this.onMenuLottieClick}>
               <Lottie options={defaultOptions} height={30} width={30} isStopped={isStopped} />
             </div>
           </div>
           {/** mb-header end */}
+          <div id="mb-sidebar" className="fw-bgcolor">
+            <div onClick={this.onMenuLottieClick}>
+              {location.pathname === '/signin' ? (
+                <div>
+                  <Link to="/signin" style={{ borderBottom: '2px solid #FFFFFF' }}>
+                    Sign In
+                  </Link>
+                </div>
+              ) : (
+                <div>
+                  <Link to="/signin">Sign In</Link>
+                </div>
+              )}
+            </div>
+
+            <div onClick={this.onMenuLottieClick}>
+              {location.pathname === '/signup' ? (
+                <div>
+                  <Link to="/signup" style={{ borderBottom: '2px solid #FFFFFF' }}>
+                    Sign Up
+                  </Link>
+                </div>
+              ) : (
+                <div>
+                  <Link to="/signup">Sign Up</Link>
+                </div>
+              )}
+            </div>
+          </div>
         </HeaderWrap>
 
         <Route exact path="/" component={Home} />
