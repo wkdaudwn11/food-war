@@ -21,6 +21,7 @@ const globalStyles = createGlobalStyle`
     .fw-color {
       color: #0A8A8A;
     }
+    
     .fw-bgcolor {
       background-color: #0A8A8A;
     }
