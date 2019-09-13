@@ -155,15 +155,6 @@ class Header extends Component {
               <Link to="/">Food War</Link>
             </div>
             <div className="menu">
-              {location.pathname === '/signin' ? (
-                <div style={{ borderBottom: '2px solid #FFFFFF' }}>
-                  <Link to="/signin">Sign In</Link>
-                </div>
-              ) : (
-                <div>
-                  <Link to="/signin">Sign In</Link>
-                </div>
-              )}
               {location.pathname === '/signup' ? (
                 <div style={{ borderBottom: '2px solid #FFFFFF' }}>
                   <Link to="/signup">Sign Up</Link>
@@ -173,6 +164,15 @@ class Header extends Component {
                   <Link to="/signup">Sign Up</Link>
                 </div>
               )}
+              {location.pathname === '/signin' ? (
+                <div style={{ borderBottom: '2px solid #FFFFFF' }}>
+                  <Link to="/signin">Sign In</Link>
+                </div>
+              ) : (
+                <div>
+                  <Link to="/signin">Sign In</Link>
+                </div>
+              )}
             </div>
           </div>
           {/** pc-header end */}
@@ -180,7 +180,7 @@ class Header extends Component {
           {/** mb-header start */}
           <div className="mb-header">
             <div className="mb-logo">
-              <Link to="/">Food War</Link>
+              <Link to="/food-war/">Food War</Link>
             </div>
             <div className="mb-menu" onClick={this.onMenuLottieClick}>
               <Lottie options={defaultOptions} height={30} width={30} isStopped={isStopped} />
@@ -191,36 +191,36 @@ class Header extends Component {
             <div onClick={this.onMenuLottieClick}>
               {location.pathname === '/signin' ? (
                 <div>
-                  <Link to="/signin" style={{ borderBottom: '2px solid #FFFFFF' }}>
+                  <Link to="/food-war/signin" style={{ borderBottom: '2px solid #FFFFFF' }}>
                     Sign In
                   </Link>
                 </div>
               ) : (
                 <div>
-                  <Link to="/signin">Sign In</Link>
+                  <Link to="/food-war/signin">Sign In</Link>
                 </div>
               )}
             </div>
 
             <div onClick={this.onMenuLottieClick}>
-              {location.pathname === '/signup' ? (
+              {location.pathname === '/food-war/signup' ? (
                 <div>
-                  <Link to="/signup" style={{ borderBottom: '2px solid #FFFFFF' }}>
+                  <Link to="/food-war/signup" style={{ borderBottom: '2px solid #FFFFFF' }}>
                     Sign Up
                   </Link>
                 </div>
               ) : (
                 <div>
-                  <Link to="/signup">Sign Up</Link>
+                  <Link to="/food-war/signup">Sign Up</Link>
                 </div>
               )}
             </div>
           </div>
         </HeaderWrap>
 
-        <Route exact path="/" component={Home} />
-        <Route path="/signin" component={SignIn} />
-        <Route path="/signup" component={SignUp} />
+        <Route exact path="/food-war" component={Home} />
+        <Route path="/food-war/signin" component={SignIn} />
+        <Route path="/food-war/signup" component={SignUp} />
       </>
     );
   }
