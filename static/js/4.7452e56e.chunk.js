@@ -1,2 +1,0 @@
-(window.webpackJsonpclient=window.webpackJsonpclient||[]).push([[4],{44:function(n,t,e){"use strict";e.r(t),e.d(t,"default",(function(){return l}));var c=e(5),i=e(6),r=e(8),u=e(7),a=e(9),o=e(0),p=e.n(o),l=function(n){function t(){return Object(c.a)(this,t),Object(r.a)(this,Object(u.a)(t).apply(this,arguments))}return Object(a.a)(t,n),Object(i.a)(t,[{key:"render",value:function(){return p.a.createElement("div",null,"SignUp")}}]),t}(o.Component)}}]);
-//# sourceMappingURL=4.7452e56e.chunk.js.map
