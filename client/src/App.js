@@ -12,12 +12,12 @@ export default class App extends Component {
     return (
       <>
         <GlobalStyles />
-        <Header />
+        {/* <Header /> */}
         <Route exact path='/' component={Home} />
         <Route exact path='/food-war' component={Home} />
         <Route path='/food-war/signin' component={SignIn} />
         <Route path='/food-war/signup' component={SignUp} />
-        <Footer />
+        {/* <Footer /> */}
       </>
     );
   }
