@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.js": "/food-war/static/js/main.d50d8f3e.chunk.js",
-    "main.js.map": "/food-war/static/js/main.d50d8f3e.chunk.js.map",
-    "runtime~main.js": "/food-war/static/js/runtime~main.7185a6c8.js",
-    "runtime~main.js.map": "/food-war/static/js/runtime~main.7185a6c8.js.map",
-    "static/js/2.ae90b689.chunk.js": "/food-war/static/js/2.ae90b689.chunk.js",
-    "static/js/2.ae90b689.chunk.js.map": "/food-war/static/js/2.ae90b689.chunk.js.map",
-    "static/js/3.be086b62.chunk.js": "/food-war/static/js/3.be086b62.chunk.js",
-    "static/js/3.be086b62.chunk.js.map": "/food-war/static/js/3.be086b62.chunk.js.map",
-    "static/js/4.5b3273e7.chunk.js": "/food-war/static/js/4.5b3273e7.chunk.js",
-    "static/js/4.5b3273e7.chunk.js.map": "/food-war/static/js/4.5b3273e7.chunk.js.map",
+    "main.js": "/food-war/static/js/main.ef3c4444.chunk.js",
+    "main.js.map": "/food-war/static/js/main.ef3c4444.chunk.js.map",
+    "runtime~main.js": "/food-war/static/js/runtime~main.dc1689be.js",
+    "runtime~main.js.map": "/food-war/static/js/runtime~main.dc1689be.js.map",
+    "static/js/2.91e8dad1.chunk.js": "/food-war/static/js/2.91e8dad1.chunk.js",
+    "static/js/2.91e8dad1.chunk.js.map": "/food-war/static/js/2.91e8dad1.chunk.js.map",
+    "static/js/3.94e80366.chunk.js": "/food-war/static/js/3.94e80366.chunk.js",
+    "static/js/3.94e80366.chunk.js.map": "/food-war/static/js/3.94e80366.chunk.js.map",
+    "static/js/4.1adabe27.chunk.js": "/food-war/static/js/4.1adabe27.chunk.js",
+    "static/js/4.1adabe27.chunk.js.map": "/food-war/static/js/4.1adabe27.chunk.js.map",
     "index.html": "/food-war/index.html",
-    "precache-manifest.3eb63b55bed8e5bcbb02218597897e27.js": "/food-war/precache-manifest.3eb63b55bed8e5bcbb02218597897e27.js",
-    "service-worker.js": "/food-war/service-worker.js"
+    "precache-manifest.109868891d66acb1b8ca019dde392b9d.js": "/food-war/precache-manifest.109868891d66acb1b8ca019dde392b9d.js",
+    "service-worker.js": "/food-war/service-worker.js",
+    "static/media/homeVideo.mp4": "/food-war/static/media/homeVideo.b6c0562b.mp4"
   }
 }

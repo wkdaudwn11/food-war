@@ -1,1 +1,0 @@
-{"version":3,"sources":["components/users/SignIn.js"],"names":["SignIn","Component"],"mappings":"iNAEqBA,E,iLAEjB,OAAO,2C,GAFyBC","file":"static/js/3.be086b62.chunk.js","sourcesContent":["import React, { Component } from 'react';\r\n\r\nexport default class SignIn extends Component {\r\n  render() {\r\n    return <div>SignIn</div>;\r\n  }\r\n}\r\n"],"sourceRoot":""}

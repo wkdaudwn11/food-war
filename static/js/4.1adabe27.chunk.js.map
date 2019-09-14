@@ -1,0 +1,1 @@
+{"version":3,"sources":["components/users/SignUp.js"],"names":["SignUp","Component"],"mappings":"iNAEqBA,E,iLAEjB,OAAO,2C,GAFyBC","file":"static/js/4.1adabe27.chunk.js","sourcesContent":["import React, { Component } from 'react';\n\nexport default class SignUp extends Component {\n  render() {\n    return <div>SignUp</div>;\n  }\n}\n"],"sourceRoot":""}
