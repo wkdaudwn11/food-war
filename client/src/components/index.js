@@ -1,4 +1,4 @@
-import withSplitting from './WithSplitting';
+import withSplitting from './withSplitting';
 
 /** users */
 export const SignIn = withSplitting(() => import('./users/SignIn'));

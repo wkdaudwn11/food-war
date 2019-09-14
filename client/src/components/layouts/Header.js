@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { withRouter } from 'react-router';
 import $ from 'jquery';
 import Lottie from 'react-lottie';
 import menuLottie from '../../lotties/menu-V2.json';
-
-import Home from '../Home';
-import { SignIn, SignUp } from '../Index';
 
 const HeaderWrap = styled.div`
   width: 100%;
@@ -60,9 +57,9 @@ const HeaderWrap = styled.div`
   .mb-header {
     display: none;
     width: 100%;
-    height: 2rem;
+    height: 4rem;
     color: #ffffff;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: bold;
     padding: 0 1rem;
   }
@@ -83,10 +80,10 @@ const HeaderWrap = styled.div`
   #mb-sidebar {
     display: none;
     position: absolute;
-    top: 4vh;
+    top: 7vh;
     left: 100%;
     width: 100%;
-    height: 96vh;
+    height: 93vh;
     padding: 1rem;
     font-size: 1.5rem;
     font-weight: bold;
@@ -137,7 +134,7 @@ class Header extends Component {
 
   render() {
     const { location } = this.props;
-    const { isStopped, isPaused } = this.state;
+    const { isStopped } = this.state;
     const defaultOptions = {
       loop: false,
       autoplay: false,
@@ -148,56 +145,68 @@ class Header extends Component {
     };
     return (
       <>
-        <HeaderWrap className="fw-bgcolor">
+        <HeaderWrap className='fw-bgcolor'>
           {/** pc-header start */}
-          <div className="pc-header">
-            <div className="logo">
-              <Link to="/">Food War</Link>
-            </div>
-            <div className="menu">
-              {location.pathname === '/signup' ? (
-                <div style={{ borderBottom: '2px solid #FFFFFF' }}>
-                  <Link to="/signup">Sign Up</Link>
-                </div>
+          <div className='pc-header'>
+            <Link to='/food-war/'>
+              <div className='logo'>Food War</div>
+            </Link>
+            <div className='menu'>
+              {location.pathname === '/food-war/signup' ? (
+                <Link to='/food-war/signup'>
+                  <div style={{ borderBottom: '2px solid #FFFFFF' }}>
+                    Sign Up
+                  </div>
+                </Link>
               ) : (
-                <div>
-                  <Link to="/signup">Sign Up</Link>
-                </div>
+                <Link to='/food-war/signup'>
+                  <div>Sign Up</div>
+                </Link>
               )}
-              {location.pathname === '/signin' ? (
-                <div style={{ borderBottom: '2px solid #FFFFFF' }}>
-                  <Link to="/signin">Sign In</Link>
-                </div>
+              {location.pathname === '/food-war/signin' ? (
+                <Link to='/food-war/signin'>
+                  <div style={{ borderBottom: '2px solid #FFFFFF' }}>
+                    Sign In
+                  </div>
+                </Link>
               ) : (
-                <div>
-                  <Link to="/signin">Sign In</Link>
-                </div>
+                <Link to='/food-war/signin'>
+                  <div>Sign In</div>
+                </Link>
               )}
             </div>
           </div>
           {/** pc-header end */}
 
           {/** mb-header start */}
-          <div className="mb-header">
-            <div className="mb-logo">
-              <Link to="/food-war/">Food War</Link>
+          <div className='mb-header'>
+            <div className='mb-logo'>
+              <Link to='/food-war/'>Food War</Link>
             </div>
-            <div className="mb-menu" onClick={this.onMenuLottieClick}>
-              <Lottie options={defaultOptions} height={30} width={30} isStopped={isStopped} />
+            <div className='mb-menu' onClick={this.onMenuLottieClick}>
+              <Lottie
+                options={defaultOptions}
+                height={30}
+                width={30}
+                isStopped={isStopped}
+              />
             </div>
           </div>
           {/** mb-header end */}
-          <div id="mb-sidebar" className="fw-bgcolor">
+          <div id='mb-sidebar' className='fw-bgcolor'>
             <div onClick={this.onMenuLottieClick}>
-              {location.pathname === '/signin' ? (
+              {location.pathname === '/food-war/signin' ? (
                 <div>
-                  <Link to="/food-war/signin" style={{ borderBottom: '2px solid #FFFFFF' }}>
+                  <Link
+                    to='/food-war/signin'
+                    style={{ borderBottom: '2px solid #FFFFFF' }}
+                  >
                     Sign In
                   </Link>
                 </div>
               ) : (
                 <div>
-                  <Link to="/food-war/signin">Sign In</Link>
+                  <Link to='/food-war/signin'>Sign In</Link>
                 </div>
               )}
             </div>
@@ -205,22 +214,21 @@ class Header extends Component {
             <div onClick={this.onMenuLottieClick}>
               {location.pathname === '/food-war/signup' ? (
                 <div>
-                  <Link to="/food-war/signup" style={{ borderBottom: '2px solid #FFFFFF' }}>
+                  <Link
+                    to='/food-war/signup'
+                    style={{ borderBottom: '2px solid #FFFFFF' }}
+                  >
                     Sign Up
                   </Link>
                 </div>
               ) : (
                 <div>
-                  <Link to="/food-war/signup">Sign Up</Link>
+                  <Link to='/food-war/signup'>Sign Up</Link>
                 </div>
               )}
             </div>
           </div>
         </HeaderWrap>
-
-        <Route exact path="/food-war" component={Home} />
-        <Route path="/food-war/signin" component={SignIn} />
-        <Route path="/food-war/signup" component={SignUp} />
       </>
     );
   }

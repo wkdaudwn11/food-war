@@ -25,6 +25,22 @@ const globalStyles = createGlobalStyle`
     .fw-bgcolor {
       background-color: #0A8A8A;
     }
+
+    .default-bgcolor {
+      background-color: #F0F0F0;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 0 1%;
+      }
+    }
 `;
 
 export default globalStyles;
