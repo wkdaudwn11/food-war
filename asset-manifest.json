@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/food-war/static/js/main.ef3c4444.chunk.js",
-    "main.js.map": "/food-war/static/js/main.ef3c4444.chunk.js.map",
-    "runtime~main.js": "/food-war/static/js/runtime~main.dc1689be.js",
-    "runtime~main.js.map": "/food-war/static/js/runtime~main.dc1689be.js.map",
-    "static/js/2.91e8dad1.chunk.js": "/food-war/static/js/2.91e8dad1.chunk.js",
-    "static/js/2.91e8dad1.chunk.js.map": "/food-war/static/js/2.91e8dad1.chunk.js.map",
-    "static/js/3.94e80366.chunk.js": "/food-war/static/js/3.94e80366.chunk.js",
-    "static/js/3.94e80366.chunk.js.map": "/food-war/static/js/3.94e80366.chunk.js.map",
-    "static/js/4.1adabe27.chunk.js": "/food-war/static/js/4.1adabe27.chunk.js",
-    "static/js/4.1adabe27.chunk.js.map": "/food-war/static/js/4.1adabe27.chunk.js.map",
+    "main.js": "/food-war/static/js/main.f4e38e7e.chunk.js",
+    "main.js.map": "/food-war/static/js/main.f4e38e7e.chunk.js.map",
+    "runtime~main.js": "/food-war/static/js/runtime~main.7950909c.js",
+    "runtime~main.js.map": "/food-war/static/js/runtime~main.7950909c.js.map",
+    "static/js/2.a389cc9b.chunk.js": "/food-war/static/js/2.a389cc9b.chunk.js",
+    "static/js/2.a389cc9b.chunk.js.map": "/food-war/static/js/2.a389cc9b.chunk.js.map",
+    "static/js/3.31af1ceb.chunk.js": "/food-war/static/js/3.31af1ceb.chunk.js",
+    "static/js/3.31af1ceb.chunk.js.map": "/food-war/static/js/3.31af1ceb.chunk.js.map",
+    "static/js/4.e2aec341.chunk.js": "/food-war/static/js/4.e2aec341.chunk.js",
+    "static/js/4.e2aec341.chunk.js.map": "/food-war/static/js/4.e2aec341.chunk.js.map",
     "index.html": "/food-war/index.html",
-    "precache-manifest.109868891d66acb1b8ca019dde392b9d.js": "/food-war/precache-manifest.109868891d66acb1b8ca019dde392b9d.js",
+    "precache-manifest.9c5a3dabf221efd85e4f76283142dd66.js": "/food-war/precache-manifest.9c5a3dabf221efd85e4f76283142dd66.js",
     "service-worker.js": "/food-war/service-worker.js",
     "static/media/homeVideo.mp4": "/food-war/static/media/homeVideo.b6c0562b.mp4"
   }
