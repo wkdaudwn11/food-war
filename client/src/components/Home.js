@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import axios from 'axios';
 import homeVideo from '../images/homeVideo.mp4';
 
 import Lottie from 'react-lottie';
@@ -304,6 +305,31 @@ const HomeWrap = styled.div`
 `;
 
 export default class Home extends Component {
+  state = {
+    email: ''
+  };
+
+  onKeyDown = e => {
+    this.setState({
+      email: e.target.value
+    });
+  };
+
+  onStart = () => {
+    const sendData = {
+      email: this.state.email
+    };
+
+    axios
+      .get(
+        'https://cdfhf8p3qe.execute-api.ap-northeast-2.amazonaws.com/dev/user/test',
+        sendData
+      )
+      .then(res => console.log(res.data))
+      //.catch(err => this.setState({ errors: err.response.data }));
+      .catch(err => console.log(err));
+  };
+
   render() {
     const lottiesInfo = [
       {
@@ -356,10 +382,14 @@ export default class Home extends Component {
               <div className='input-with-button'>
                 <input
                   type='email'
-                  value=''
+                  value={this.state.email}
                   placeholder='이메일을 입력해주세요.'
+                  required
+                  onChange={this.onKeyDown}
                 />
-                <div class='button'>시작하기</div>
+                <div className='button' onClick={this.onStart}>
+                  시작하기
+                </div>
               </div>
               <div className='separator'>
                 <div className='or'>OR</div>
