@@ -17,28 +17,6 @@ functions:
       - http:
           path: /
           method: any
-          cors:
-            origin: '*'
-            headers:
-              - Cookie
-              - Content-Type
-              - X-Amz-Date
-              - Authorization
-              - X-Api-Key
-              - X-Amz-Security-Token
-              - X-Amz-User-Agent
-            allowCredentials: true
       - http:
           path: /{any+}
           method: any
-          cors:
-            origin: '*'
-            headers:
-              - Cookie
-              - Content-Type
-              - X-Amz-Date
-              - Authorization
-              - X-Api-Key
-              - X-Amz-Security-Token
-              - X-Amz-User-Agent
-            allowCredentials: true
