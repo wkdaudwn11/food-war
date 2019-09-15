@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
-import homeVideo from '../images/homeVideo.mp4';
-
+import classnames from 'classnames';
 import Lottie from 'react-lottie';
 import githubLottie from '../lotties/github.json';
 import facebookLottie from '../lotties/facebook.json';
 import googleLottie from '../lotties/google.json';
+import homeVideo from '../images/homeVideo.mp4';
 
 const HomeWrap = styled.div`
   #background-video {
@@ -92,30 +92,35 @@ const HomeWrap = styled.div`
 
   .container .right-contents .contents .input-with-button {
     width: 100%;
-    display: flex;
-    flex-direction: row;
+    flex-direction: column;
   }
 
-  .container .right-contents .contents .input-with-button input[type='email'] {
-    flex: 8;
+  .container .right-contents .contents .input-with-button input {
+    display: block;
+    width: 100%;
     height: 50px;
     font-size: 1.2rem;
-    border: 1px solid #dee2e6;
     border-radius: 3px 0 0 3px;
   }
 
+  .container .right-contents .contents .input-with-button input + input,
+  .container .right-contents .contents .input-with-button input + button {
+    margin-top: 0.5rem;
+  }
+
   .container .right-contents .contents .input-with-button .button {
-    flex: 2;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #0a8a8a;
     color: #ffffff;
+    width: 100%;
     height: 50px;
     font-size: 1.2rem;
     border-radius: 0 3px 3px 0;
     cursor: pointer;
     transition: all 0.3s;
+    border: none;
   }
 
   .container .right-contents .contents .input-with-button .button:hover {
@@ -155,6 +160,9 @@ const HomeWrap = styled.div`
 
   .container .right-contents .contents .social-login div div:nth-child(1) {
     background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .container .right-contents .contents .social-login div div:nth-child(2) {
     flex: 9;
@@ -272,24 +280,17 @@ const HomeWrap = styled.div`
 
     .container .right-contents .contents .input-with-button {
       width: 100%;
-      display: flex;
-      flex-direction: row;
     }
 
-    .container
-      .right-contents
-      .contents
-      .input-with-button
-      input[type='email'] {
-      flex: 7;
+    .container .right-contents .contents .input-with-button input {
+      display: block;
+      width: 100%;
       height: 50px;
       font-size: 14px;
-      border: 1px solid #dee2e6;
       border-radius: 3px 0 0 3px;
     }
 
     .container .right-contents .contents .input-with-button .button {
-      flex: 3;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -306,31 +307,54 @@ const HomeWrap = styled.div`
 
 export default class Home extends Component {
   state = {
-    email: ''
+    email: '',
+    password: '',
+    errors: {}
   };
 
-  onKeyDown = e => {
+  onChange = e => {
     this.setState({
-      email: e.target.value
+      [e.target.name]: e.target.value
     });
   };
 
-  onStart = () => {
+  onSubmit = e => {
+    e.preventDefault();
+
     const sendData = {
-      email: this.state.email
+      email: this.state.email,
+      password: this.state.password
     };
 
-    axios
-      .get(
-        'https://cdfhf8p3qe.execute-api.ap-northeast-2.amazonaws.com/dev/user/test',
-        sendData
-      )
-      .then(res => console.log(res.data))
-      //.catch(err => this.setState({ errors: err.response.data }));
-      .catch(err => console.log(err));
+    if (sendData.email === '') {
+      this.setState({
+        errors: {
+          email: '이메일을 입력해주세요.'
+        }
+      });
+    } else if (sendData.password === '') {
+      this.setState({
+        errors: {
+          password: '비밀번호를 입력해주세요.'
+        }
+      });
+    } else {
+      this.setState({
+        errors: {}
+      });
+      // axios
+      //   .get(
+      //     'https://cdfhf8p3qe.execute-api.ap-northeast-2.amazonaws.com/dev/user/signin',
+      //     sendData
+      //   )
+      //   .then(res => console.log(res.data))
+      //   //.catch(err => this.setState({ errors: err.response.data }));
+      //   .catch(err => console.log(err));
+    }
   };
 
   render() {
+    const { email, password, errors } = this.state;
     const lottiesInfo = [
       {
         loop: true,
@@ -358,15 +382,15 @@ export default class Home extends Component {
       }
     ];
     return (
-      <HomeWrap className='default-bgcolor'>
+      <HomeWrap className="default-bgcolor">
         {/* <video id='background-video' loop autoPlay>
           <source src={homeVideo} type='video/mp4' />
           <source src={homeVideo} type='video/ogg' />
           Your browser does not support the video tag.
         </video> */}
-        <div className='container'>
-          <div className='left-contents'>
-            <div className='contents'>
+        <div className="container">
+          <div className="left-contents">
+            <div className="contents">
               <p>Food War</p>
               <p>
                 오늘은 뭐 먹지??
@@ -376,45 +400,64 @@ export default class Home extends Component {
               <p>매일매일 고민하기 귀찮다면 지금 당장 이용해보세요!</p>
             </div>
           </div>
-          <div className='right-contents'>
-            <div className='contents'>
-              <div className='title'>지금 푸드워를 시작하세요.</div>
-              <div className='input-with-button'>
-                <input
-                  type='email'
-                  value={this.state.email}
-                  placeholder='이메일을 입력해주세요.'
-                  required
-                  onChange={this.onKeyDown}
-                />
-                <div className='button' onClick={this.onStart}>
-                  시작하기
-                </div>
+          <div className="right-contents">
+            <div className="contents">
+              <div className="title">지금 푸드워를 시작하세요.</div>
+              <div className="input-with-button">
+                <form onSubmit={this.onSubmit}>
+                  <input
+                    type="email"
+                    name="email"
+                    value={email}
+                    placeholder="이메일을 입력해주세요."
+                    onChange={this.onChange}
+                    required
+                    className={classnames('default-border', {
+                      'is-invalid': errors.email
+                    })}
+                  />
+                  {errors.email && <div className="fw-invalid-feedback">{errors.email}</div>}
+                  <input
+                    type="password"
+                    name="password"
+                    value={password}
+                    placeholder="비밀번호를 입력해주세요."
+                    required
+                    onChange={this.onChange}
+                    className={classnames('default-border', {
+                      'is-invalid': errors.password
+                    })}
+                  />
+                  {errors.password && <div className="fw-invalid-feedback">{errors.password}</div>}
+                  <button className="button" type="submit">
+                    시작하기
+                  </button>
+                </form>
               </div>
-              <div className='separator'>
-                <div className='or'>OR</div>
+              <div className="separator">
+                <div className="or">OR</div>
               </div>
-              <div className='social-login'>
-                <div className='github'>
+              <div className="social-login">
+                <div className="github">
                   <div>
                     <Lottie options={lottiesInfo[0]} width={50} height={50} />
                   </div>
                   <div>Github 로그인</div>
                 </div>
-                <div className='google'>
+                <div className="google">
                   <div>
                     <Lottie options={lottiesInfo[1]} width={50} height={50} />
                   </div>
                   <div>Google 로그인</div>
                 </div>
-                <div className='facebook'>
+                <div className="facebook">
                   <div>
                     <Lottie options={lottiesInfo[2]} width={50} height={50} />
                   </div>
                   <div>Facebook 로그인</div>
                 </div>
               </div>
-              <div className='not-login fw-color'>
+              <div className="not-login fw-color">
                 <span>로그인하지 않고 사용하기</span>
               </div>
             </div>

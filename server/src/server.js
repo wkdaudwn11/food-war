@@ -5,6 +5,7 @@ import helmet from 'helmet';
 import cookieParser from 'cookie-parser';
 import bodyParser from 'body-parser';
 import cors from 'cors'; // CORS를 허용하기 위한 모듈
+import mongoose from 'mongoose';
 
 /** Import router */
 import userRouter from './router/userRouter';
@@ -33,12 +34,21 @@ var corsOptions = {
 app.use(cors(corsOptions));
 /** CORS 관련 코드 시작 */
 
+/** mongoDB (atlas) 연동 시작 */
+const db = require('./config/keys').mongoURI;
+mongoose.Promise = global.Promise;
+mongoose
+  .connect(db, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true })
+  .then(() => console.log('MongoDB Connected...'))
+  .catch(err => console.log(err));
+mongoose.set('userFindAndModify', false);
+/** mongoDB (atlas) 연동 끝 */
+
 /** Routing */
 app.use('/user', userRouter);
 
 const PORT = process.env.PORT || 4000;
-const handleListening = () =>
-  console.log(`Listening on: http://localhost:${PORT}..`);
+const handleListening = () => console.log(`Listening on: http://localhost:${PORT}..`);
 
 app.listen(PORT, err => {
   if (err) {

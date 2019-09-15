@@ -1,3 +1,5 @@
+app: fw-api-app
+
 service:
   name: foodwar-server
 

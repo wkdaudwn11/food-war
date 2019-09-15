@@ -29,6 +29,22 @@ const globalStyles = createGlobalStyle`
     .default-bgcolor {
       background-color: #F0F0F0;
     }
+
+    .fw-invalid-feedback {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      height: 30px;
+      color: red;
+    }
+
+    input.is-invalid {
+      border: 1px solid red;
+    }
+
+    .default-border {
+      border: 1px solid #dee2e6;
+    }
 `;
 
 export default globalStyles;
