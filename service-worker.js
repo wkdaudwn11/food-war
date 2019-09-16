@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/food-war/precache-manifest.5208c0b2ca579f34d8ff1623811a5b40.js"
+  "/food-war/precache-manifest.8b9726f2eff625ea069ea24d04bf4bc3.js"
 );
 
 self.addEventListener('message', (event) => {

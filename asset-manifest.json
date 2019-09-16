@@ -1,18 +1,13 @@
 {
   "files": {
-    "main.js": "/food-war/static/js/main.3cfb96df.chunk.js",
-    "main.js.map": "/food-war/static/js/main.3cfb96df.chunk.js.map",
-    "runtime~main.js": "/food-war/static/js/runtime~main.b46ceb7b.js",
-    "runtime~main.js.map": "/food-war/static/js/runtime~main.b46ceb7b.js.map",
-    "static/js/2.d259dbb6.chunk.js": "/food-war/static/js/2.d259dbb6.chunk.js",
-    "static/js/2.d259dbb6.chunk.js.map": "/food-war/static/js/2.d259dbb6.chunk.js.map",
-    "static/js/3.bb2fc8c1.chunk.js": "/food-war/static/js/3.bb2fc8c1.chunk.js",
-    "static/js/3.bb2fc8c1.chunk.js.map": "/food-war/static/js/3.bb2fc8c1.chunk.js.map",
-    "static/js/4.8e19737a.chunk.js": "/food-war/static/js/4.8e19737a.chunk.js",
-    "static/js/4.8e19737a.chunk.js.map": "/food-war/static/js/4.8e19737a.chunk.js.map",
+    "main.js": "/food-war/static/js/main.8b7b5e1e.chunk.js",
+    "main.js.map": "/food-war/static/js/main.8b7b5e1e.chunk.js.map",
+    "runtime~main.js": "/food-war/static/js/runtime~main.2dc6f46a.js",
+    "runtime~main.js.map": "/food-war/static/js/runtime~main.2dc6f46a.js.map",
+    "static/js/2.9d85e90e.chunk.js": "/food-war/static/js/2.9d85e90e.chunk.js",
+    "static/js/2.9d85e90e.chunk.js.map": "/food-war/static/js/2.9d85e90e.chunk.js.map",
     "index.html": "/food-war/index.html",
-    "precache-manifest.5208c0b2ca579f34d8ff1623811a5b40.js": "/food-war/precache-manifest.5208c0b2ca579f34d8ff1623811a5b40.js",
-    "service-worker.js": "/food-war/service-worker.js",
-    "static/media/homeVideo.mp4": "/food-war/static/media/homeVideo.b6c0562b.mp4"
+    "precache-manifest.8b9726f2eff625ea069ea24d04bf4bc3.js": "/food-war/precache-manifest.8b9726f2eff625ea069ea24d04bf4bc3.js",
+    "service-worker.js": "/food-war/service-worker.js"
   }
 }
